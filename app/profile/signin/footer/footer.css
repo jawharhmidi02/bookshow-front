@@ -1,0 +1,100 @@
+:root{
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #e8e9ea;
+    --font-color-primary: #000000;
+    --font-color-secondary: #453e3e;
+    --primary-color: #d90700;
+    --secondary-color: #ef4d48;
+    --font-family-primary: "roboto", sans-serif;
+    --font-family-secondary: "Sora", sans-serif;
+    --font-family-tertiary: "DM Serif Display", serif;
+}
+
+footer{
+    margin-top: 10vh;
+    height: 34vh;
+    background-color: black;
+    padding-top: 3vh;
+}
+
+.footer-nav{
+    background-color: transparent;
+    
+}
+
+.footer-nav .logo a{
+    color: var(--background-color-primary);
+}
+
+.footer-nav .logo a:hover{
+    color: var(--primary-color);
+}
+
+.footer-nav .links div{
+    color: white;
+}
+
+.footer-nav .links div:hover{
+    color: var(--secondary-color);
+}
+
+.footer-nav .profile{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer-nav .profile a{
+    font-size: 24px;
+    height: 46px;
+    width: 46px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.fa-facebook:hover{
+    color: white !important;
+    background-color: #3B5998 !important;
+}
+
+.fa-linkedin:hover{
+    color: white !important;
+    background-color: #007bb5 !important;
+}
+
+.fa-github:hover{
+    color: white !important;
+    background-color: var(--primary-color) !important;
+}
+
+footer hr{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border: 0;
+    background-color: white;
+    height: 1.5px;
+    
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-family: var(--font-family-secondary);
+    font-size: 1.2rem;
+}
+
+footer p a{
+    color: var(--primary-color);
+    transition: all 0.4s;
+}
+
+footer p a:hover{
+    color: var(--secondary-color);
+    text-decoration:underline;
+}

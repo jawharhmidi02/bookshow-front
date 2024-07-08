@@ -1,0 +1,19 @@
+{
+  "name": "front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "cloudinary": "^2.2.0",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

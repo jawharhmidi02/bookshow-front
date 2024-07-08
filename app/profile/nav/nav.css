@@ -1,0 +1,76 @@
+:root{
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #e8e9ea;
+    --font-color-primary: #000000;
+    --font-color-secondary: #453e3e;
+    --primary-color: #d90700;
+    --secondary-color: #ef4d48;
+    --font-family-primary: "roboto", sans-serif;
+    --font-family-secondary: "Sora", sans-serif;
+    --font-family-tertiary: "DM Serif Display", serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color-primary);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10svh;
+    align-items: center;
+    background-color: var(--background-color-primary);
+}
+
+.logo{
+    font-size: 2.5rem;
+    font-family: var(--font-family-third);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.logo:hover{
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-family: var(--font-family-primary);
+}
+
+.links div{
+    color: var(--font-color-primary);
+    text-decoration: none;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.links div:hover{
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+}
+
+.profile span{
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: all 0.4s;
+    border-radius: 50%;
+}
+
+.profile span:hover{
+    color: var(--secondary-color);
+    scale: 1.2;
+}

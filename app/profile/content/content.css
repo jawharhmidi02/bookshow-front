@@ -1,0 +1,601 @@
+:root{
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #e8e9ea;
+    --font-color-primary: #000000;
+    --font-color-secondary: #453e3e;
+    --primary-color: #d90700;
+    --secondary-color: #ef4d48;
+    --font-family-primary: "roboto", sans-serif;
+    --font-family-secondary: "Sora", sans-serif;
+    --font-family-tertiary: "DM Serif Display", serif;
+}
+
+.gone{
+    display: none;
+}
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.pf-details-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.pf-details-section .left{
+    display: flex;
+    flex-direction: row;
+}
+
+.pf-pfp img{
+    height: 160px;
+    width: 160px;
+    border: 0.5px solid var(--background-color-secondary);
+    object-fit: cover;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 50%;
+}
+
+.pf-details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.pf-details h2{
+    font-family: var(--font-family-secondary);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.pf-details p{
+    font-family: var(--font-family-primary);
+    font-size: 1.1rem;
+    color: var(--font-color-secondary);
+    font-weight: 300;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+}
+.right button{
+    width: 160px;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 1.1rem;
+    font-family: var(--font-family-secondary);
+    background-color: var(--primary-color);
+    color: white;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.right button:hover{
+    background-color: var(--secondary-color);
+    scale: 1.1;
+    letter-spacing: 1px;
+}
+
+.profile-container .hr{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.profile-container .hr hr{
+    border: 0;
+    background-color: var(--background-color-secondary);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 1px;
+    width: 80%;
+}
+
+.pf-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16vw;
+    margin-top: 20px;
+}
+
+.pf-menu div{
+    font-size: 1.6rem;
+    font-family: var(--font-family-primary);
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.pf-menu div:hover{
+    scale: 1.1;
+    text-shadow: var(--secondary-color) 1px 1px;
+}
+
+.pf-menu div.selected{
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: underline 2px var(--primary-color);
+    text-underline-offset: 10px;
+}
+
+.posts-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts-container .upload-container{
+    width: 60vw;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: var(--background-color-secondary);
+    border-radius: 20px;
+}
+
+.posts-container .upload-container .up{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posts-container .upload-container .up div{
+    width: 90%;
+    border: 0;
+    border-radius: 20px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    font-size: 1.3rem;
+    font-family: var(--font-family-primary);
+    font-weight: 300;
+    color: var(--font-color-secondary);
+    height: 80%;
+    background-color: var(--background-color-primary);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.posts-container .upload-container .up div:hover{
+    filter: blur(0.5px);
+    scale: 1.02;
+    background-color:#f5f5f5;
+}
+
+.upload-hr{
+    border: 0;
+    height: 0.7px;
+    background-color: var(--font-color-secondary);
+}
+
+.posts-container .upload-container .down{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 5%;
+}
+
+.posts-container .upload-container .down button{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    border-radius: 16px;
+    background-color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-family: var(--font-family-primary);
+    color: white;
+    gap: 5px;
+    transition: all 0.4s;
+}
+
+.posts-container .upload-container .down button:hover{
+    background-color: var(--primary-color);
+    scale: 1.03;
+    letter-spacing: 2px;
+}
+
+.title hr{
+    height: 2px;
+    background-color: var(--primary-color);
+    border: 0;
+    margin-bottom: 4vh;
+    width: 10vw;
+}
+
+.title{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family-tertiary);
+    margin-top: 20px;
+    color: var(--font-color-secondary);
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.posts-list .end-post{
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    font-family: var(--font-family-primary);
+    font-weight: 300;
+    color: var(--font-color-secondary);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.card{
+    min-height: 30vh;
+    max-height: 50vh;
+    max-width: 65vw;
+    min-width: 65vw;
+    background-color: var(--background-color-secondary);
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+}
+
+.reversecard{
+    flex-direction: row-reverse;
+}
+
+.reversecard .details{
+    padding-left: 0 !important;
+    padding-right: 20px;
+}
+
+.card .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    width: 50%;
+    max-width: 50%;
+}
+
+.card .details .type{
+    color: var(--secondary-color);
+    font-family: var(--font-family-secondary);
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.card .details .name{
+    font-family: var(--font-family-tertiary);
+    font-size: 2.4rem;
+}
+
+.card .details .author{
+    font-family: var(--font-family-primary);
+    color: var(--font-color-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.card .details .description{
+    font-family: var(--font-family-secondary);
+    color: var(--font-color-secondary);
+    font-size: 1rem;
+    word-wrap: break-word;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.buttons div{
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.buttons div:hover{
+    scale: 1.1;
+}
+
+.buttons .readmore{
+    background-color: var(--primary-color);
+    color: white;
+    margin-right: 20px;
+}
+
+.buttons .readmore:hover{
+    background-color: var(--secondary-color);
+}
+
+.buttons .openbook{
+    background-color: var(--background-color-primary);
+}
+
+.buttons .openbook:hover{
+    background-color: rgb(208, 205, 205);
+}
+
+.card .cover_photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.card .cover_photo .photo-container{
+    width: 300px;
+    height: 450px;
+    position: relative;
+}
+
+.book-details-rev-likes{
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.book-details-rev-likes div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #8a8888;
+    font-family: var(--font-family-tertiary);
+    text-align: center;
+    cursor: default;
+    gap: 5px;
+}
+
+.book-details-rev-likes div span{
+    font-size: 30px;
+}
+
+.edit-profile-popup{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.185);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.edit-profile-content{
+    background-color: white;
+    z-index: 11;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.exit{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.exit div{
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 15px;
+    font-size: 1.4rem;
+    font-family: var(--font-family-secondary);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.exit div:hover{
+    scale: 1.1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.details-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.edit-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.edit-button button{
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    border-radius: 16px;
+    background-color: var(--font-color-secondary);
+    font-size: 1.3rem;
+    font-family: var(--font-family-primary);
+    color: white;
+    gap: 5px;
+    transition: all 0.4s;
+}
+
+.edit-button button:hover{
+    scale: 1.1;
+    background-color: var(--secondary-color);
+    letter-spacing: 1px;
+}
+
+.pf-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pf-inputs input{
+    width: 50vw;
+    border: 0.5px solid var(--font-color-secondary);
+    height: 40px;
+    padding-left: 20px;
+    font-size: 1.4rem;
+    font-family: var(--font-family-secondary);
+    border-radius: 20px;
+}
+
+.submit{
+    width: 100%;
+    justify-content: space-between;
+}
+.submit button{
+    height: 40px;
+    width: 150px;
+}
+
+.submit div{
+    font-size: 1.1rem;
+    font-family: var(--font-family-primary);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.4s;
+
+}
+
+.submit div:hover{
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.logout{
+    font-size: 1.1rem !important;
+    color: var(--primary-color) !important; 
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.add-book-popup .details-add{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5vw;
+}
+
+.add-book-popup .cover-photo{
+    width: 40%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-book-popup .photo-container{
+    width: 20vw;
+    height: 52vh;
+    border: 0.8px solid var(--secondary-color);
+    border-radius: 10px;
+
+}
+.add-book-popup .photo-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 0px transparent;
+}
+
+.add-book-popup .pf-inputs{
+    width: 60%;
+    flex-shrink: 0;
+}
+
+.add-book-popup .pf-inputs input{
+    width: 30vw;
+}
+
+.add-book-popup .title{
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.upload-book-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-book-button button, .details-add button{
+    width: 180px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    border-radius: 16px;
+    background-color: var(--font-color-secondary);
+    font-size: 1.3rem;
+    font-family: var(--font-family-primary);
+    color: white;
+    gap: 5px;
+    transition: all 0.4s;
+}
+
+.upload-book-button button:hover, .details-add button:hover{
+    scale: 1.1;
+    background-color: var(--secondary-color);
+    letter-spacing: 1px;
+}
+
+.details-add button{
+    margin-top: 10px;
+}
+
+.add-book-popup .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

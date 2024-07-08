@@ -1,0 +1,160 @@
+:root{
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #e8e9ea;
+    --font-color-primary: #000000;
+    --font-color-secondary: #453e3e;
+    --primary-color: #d90700;
+    --secondary-color: #ef4d48;
+    --font-family-primary: "roboto", sans-serif;
+    --font-family-secondary: "Sora", sans-serif;
+    --font-family-tertiary: "DM Serif Display", serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family-tertiary);
+    color: var(--font-color-secondary);
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title hr{
+    height: 2px;
+    background-color: var(--primary-color);
+    border: 0;
+    margin-bottom: 4vh;
+    width: 15vw;
+    margin-top: 1vw;
+}
+
+.card{
+    min-height: 30vh;
+    max-height: 50vh;
+    max-width: 65vw;
+    min-width: 65vw;
+    background-color: var(--background-color-secondary);
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+}
+
+.reversecard{
+    flex-direction: row-reverse;
+}
+
+.reversecard .details{
+    padding-left: 0 !important;
+    padding-right: 20px;
+}
+
+.card .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    width: 50%;
+    max-width: 50%;
+}
+
+.card .details .type{
+    color: var(--secondary-color);
+    font-family: var(--font-family-secondary);
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.card .details .name{
+    font-family: var(--font-family-tertiary);
+    font-size: 2.4rem;
+}
+
+.card .details .author{
+    font-family: var(--font-family-primary);
+    color: var(--font-color-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.card .details .description{
+    font-family: var(--font-family-secondary);
+    color: var(--font-color-secondary);
+    font-size: 1rem;
+    word-wrap: break-word;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.buttons div{
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.buttons div:hover{
+    scale: 1.1;
+}
+
+.buttons .readmore{
+    background-color: var(--primary-color);
+    color: white;
+    margin-right: 20px;
+}
+
+.buttons .readmore:hover{
+    background-color: var(--secondary-color);
+}
+
+.buttons .openbook{
+    background-color: var(--background-color-primary);
+}
+
+.buttons .openbook:hover{
+    background-color: rgb(208, 205, 205);
+}
+
+.card .cover_photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.card .cover_photo .photo-container{
+    width: 300px;
+    height: 450px;
+    position: relative;
+}
