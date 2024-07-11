@@ -76,7 +76,7 @@ const Content = () => {
     const password = passwordRef.current.value.trim();
     const newErrors = {};
 
-    const response = await fetch(`http://localhost:5000/users/${email}&${password}`, {
+    const response = await fetch(`https://bookshow-back.onrender.com/users/${email}&${password}`, {
       method:"GET"
       , headers: {
         "Content-Type": "application/json",

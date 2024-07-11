@@ -132,7 +132,7 @@ const Content = ({ user_data }) => {
 
 
     const fetch_data = async () => {
-        const response = await fetch(`http://localhost:5000/books/byuserid/${data.id_user}`, {
+        const response = await fetch(`https://bookshow-back.onrender.com/books/byuserid/${data.id_user}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -142,8 +142,8 @@ const Content = ({ user_data }) => {
             const books = await response.json();
             const newBooklikcomm = await Promise.all(books.map(async (book) => {
                 try {
-                    const response = await fetch(`http://localhost:5000/rates/byid/${book.id_book}`);
-                    const comt = await fetch(`http://localhost:5000/reviews/count/${book.id_book}`)
+                    const response = await fetch(`https://bookshow-back.onrender.com/rates/byid/${book.id_book}`);
+                    const comt = await fetch(`https://bookshow-back.onrender.com/reviews/count/${book.id_book}`)
                     if (response.ok && comt.ok) {
                         const comtdata = await comt.json();
                         console.log(comtdata);
@@ -182,7 +182,7 @@ const Content = ({ user_data }) => {
 
     const delete_account  = async ()=>{
         showToast("Deleting Account, Please wait!")
-        const response = await fetch(`http://localhost:5000/users/${data.id_user}`, {
+        const response = await fetch(`https://bookshow-back.onrender.com/users/${data.id_user}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -230,7 +230,7 @@ const Content = ({ user_data }) => {
         formData.append('file', file);
 
         try {
-            const response = await fetch(`http://localhost:5000/users/uploadpfp/${data.id_user}`, {
+            const response = await fetch(`https://bookshow-back.onrender.com/users/uploadpfp/${data.id_user}`, {
                 method: 'POST',
                 body: formData,
             });
@@ -272,7 +272,7 @@ const Content = ({ user_data }) => {
             email
         };
 
-        const response = await fetch(`http://localhost:5000/users/${data.id_user}`, {
+        const response = await fetch(`https://bookshow-back.onrender.com/users/${data.id_user}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -349,84 +349,6 @@ const Content = ({ user_data }) => {
         }
         return true
     }
-
-    // const saveBook = async () => {
-    //     const title = book_title.current.value.trim();
-    //     const description = book_description.current.value.trim();
-    //     const category = book_category.current.value.trim();
-    //     const genre = book_genre.current.value.trim();
-    //     const id_user = data.id_user;
-    //     const author = book_author.current.value.trim();
-    //     const pdf_url = "test";
-    //     const body = {
-    //         title,
-    //         description,
-    //         category,
-    //         genre,
-    //         id_user,
-    //         pdf_url,
-    //         author
-    //     }
-    //     console.log(body);
-    //     try {
-    //         showToast("Uploading Book...");
-    //         const response = await fetch(`http://localhost:5000/books/`, {
-    //             method: 'POST',
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //               },
-    //             body: JSON.stringify(body),
-    //         });
-
-    //         if (response.ok) {
-    //             var responseData = await response.json();
-    //             if (responseData.length > 0) {
-    //                 showToast("Uploading Book's Cover...");
-    //                 try{
-    //                     const formData = new FormData();
-    //                     formData.append('file', books_cover_input.current.files[0]);
-    //                     const uploadcover = await fetch(`http://localhost:5000/books/uploadcover/${responseData[0].id_book}`, {
-    //                         method: 'POST',
-    //                         body: formData,
-    //                     });
-    //                     if (uploadcover.ok){
-    //                         responseData = await uploadcover.json();
-    //                         if (responseData.length > 0) {
-    //                             showToast("Uploading Book's PDF...");
-    //                             const formDataPdf = new FormData();
-    //                             formDataPdf.append('file', books_pdf_input.current.files[0]);
-    //                             try{
-    //                                 const uploadpdf = await fetch(`http://localhost:5000/books/uploadpdf/${responseData[0].id_book}`, {
-    //                                     method: 'POST',
-    //                                     body: formDataPdf,
-    //                                 });
-    //                                 if (uploadpdf.ok){
-    //                                     showToast("Book Uploaded Successfully!");
-    //                                     fetch_data();
-    //                                     add_book_popup.current.style.display = "none";
-    //                                     return;
-    //                                 } else {
-    //                                     showToast("Failed to upload book's pdf!");
-    //                                 }
-    //                             }catch{
-    //                                 showToast("Error to upload book's pdf!");
-    //                             }
-    //                         }
-    //                     } else{
-    //                         showToast("Failed to upload book's Cover!");
-    //                     }
-    //                 }
-    //                 catch{
-    //                     showToast("Error to upload book's Cover!");
-    //                 }
-    //             }
-    //         } else {
-    //             showToast("Failed to upload book's data!");
-    //         }
-    //     } catch (error) {
-    //         showToast("Error uploading book's data!");
-    //     }
-    // };
     const saveBook = async () => {
         if(!selectedBook){
             console.log("hello");
@@ -457,7 +379,7 @@ const Content = ({ user_data }) => {
         };
     
         const method = selectedBook ? 'PATCH' : 'POST';
-        const url = selectedBook ? `http://localhost:5000/books/${selectedBook.id_book}` : 'http://localhost:5000/books/';
+        const url = selectedBook ? `https://bookshow-back.onrender.com/books/${selectedBook.id_book}` : 'https://bookshow-back.onrender.com/books/';
     
         console.log(body);
         try {
@@ -478,7 +400,7 @@ const Content = ({ user_data }) => {
                         try {
                             const formData = new FormData();
                             formData.append('file', books_cover_input.current.files[0]);
-                            const uploadcover = await fetch(`http://localhost:5000/books/uploadcover/${responseData[0].id_book}`, {
+                            const uploadcover = await fetch(`https://bookshow-back.onrender.com/books/uploadcover/${responseData[0].id_book}`, {
                                 method: 'POST',
                                 body: formData,
                             });
@@ -489,7 +411,7 @@ const Content = ({ user_data }) => {
                                     const formDataPdf = new FormData();
                                     formDataPdf.append('file', books_pdf_input.current.files[0]);
                                     try {
-                                        const uploadpdf = await fetch(`http://localhost:5000/books/uploadpdf/${responseData[0].id_book}`, {
+                                        const uploadpdf = await fetch(`https://bookshow-back.onrender.com/books/uploadpdf/${responseData[0].id_book}`, {
                                             method: 'POST',
                                             body: formDataPdf,
                                         });
@@ -632,7 +554,7 @@ const Content = ({ user_data }) => {
                     </div>
                     <div className='details-edit'>
                         <div className='pf-pfp'>
-                            <img ref={pfp_upload} src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="profile" />
+                            <img ref={pfp_upload} src={data.cover_photo} alt="profile" />
                             <div className='edit-button'>
                                 <button onClick={()=>{fileinput.current.click()}}>
                                     Upload

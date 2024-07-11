@@ -26,7 +26,7 @@ function getEmailAndPasswordFromCookies() {
 }
 
 const Home = () => {
-    const [data, setData] = useState({ created_at: "", full_name: "", email: "", password: "", id_user: "" });
+    const [data, setData] = useState({ created_at: "", full_name: "", email: "", password: "", id_user: "", cover_photo: "" });
     const [full_name, setFull_name] = useState("");
     const [isLoading, setIsLoading] = useState(true);
 
@@ -38,7 +38,7 @@ const Home = () => {
                 return;
             }
 
-            const response = await fetch(`http://localhost:5000/users/${email}&${password}`, {
+            const response = await fetch(`https://bookshow-back.onrender.com/users/${email}&${password}`, {
                 method: 'GET',
             });
 
